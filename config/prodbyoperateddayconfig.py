@@ -1,5 +1,5 @@
 from .baseconfig import BaseConfig
-from .header_enum import HeaderTypes
+from .headertypes import HeaderTypes
 
 #Config file to keep track of which headers are relevant for each data file
 class ProdByOperatedDayConfig(BaseConfig):

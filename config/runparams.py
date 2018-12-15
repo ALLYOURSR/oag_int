@@ -1,11 +1,12 @@
-from .header_enum import HeaderTypes
-
+from .headertypes import HeaderTypes
+from .NeuralNetTypes import NeuralNetTypes
 
 class RunParams:
     def __init__(self):
         self.num_neurons = 8
-        self.batch_size=250
+        self.batch_size=100
         self.num_training_steps = 1000000000
+        self.neural_net_type = NeuralNetTypes.Basic
 
         self.headers_to_evaluate = [#HeaderTypes.foot_per_stage,
                                     #HeaderTypes.fluid_barrels,

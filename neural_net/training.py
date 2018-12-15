@@ -1,25 +1,42 @@
 import tensorflow as tf
+import os
+import numpy as np
 
-def train_net(input_placeholder, output_tensor):
-    """Normally, I would prefer to explicitly pass objects for training, like the graph in tensorflow
-    tensorflow, however, keeps track of a default_graph object automatically, which is fine so long as only one
-    default graph is needed"""
-    error = tf.reduce_mean(tf.square(Y - y_model))  # cost function, mse
-    train = tf.train.GradientDescentOptimizer(0.01).minimize(error)  # training step
+def get_batch(data_array, i0, i1):
+    """Provides a quick and dirty wrapping functionality"""
+    if i0 > i1:
+        a0 = data_array[i1:, :]
+        a1 = data_array[:i0, :]
+        return np.concatenate([a0, a1], 0)
+    else:
+        return data_array[i0:i1, :]
+
+def train_net(data_array, input_placeholder, output_placeholder, error_tensor, train_tensor, summaries, batch_size, num_training_runs):
 
     with tf.Session() as sess:
-        tf.global_variables_initializer().run()  # initialize all tensorflow variables
-        errors = [0, 1]  # error list to check for convergence.
-        for i in range(500):  # training episodes
-            for x, y in zip(trX[::i + 1], trY[::i + 1]):  # +1 for speed-up towards end of training, not necessary
-                sess.run(train, feed_dict={X: x, Y: y})
-                MSE = sess.run(error, feed_dict={X: x, Y: y})
-            if i % 2 == 0:
-                errors[0] = sess.run(error, feed_dict={X: x, Y: y})
-                print("{0}.) Training MSE: {1}".format(i, MSE)
-                else:
-                errors[1] = sess.run(error, feed_dict={X: x, Y: y})
-                print("{0}.) Training MSE: {1}".format(i, MSE)
-                if np.isclose(errors[0], errors[1]):
-                    print("Done Training!")  # regression has converged
-                break
+        log_dir = '/tmp/oag_int/train/'
+        os.system("rm {0} -r".format(log_dir))
+        train_writer = tf.summary.FileWriter('/tmp/oag_int/train/',
+                                             sess.graph)
+
+        i0 = 0
+        i1 = batch_size
+        tf.global_variables_initializer().run() #initialize variables
+        for i in range(num_training_runs): #training episodes
+            batch = get_batch(data_array,i0, i1)
+            in_arr = batch[:,:-1] #grab all but the last column
+            out_arr = batch[:, -1] #grab last column
+
+            sess.run(train_tensor, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr})
+            MSE = sess.run(error_tensor, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr})
+
+
+
+            if i % 50 == 0:
+                summary = sess.run(summaries, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr})
+                train_writer.add_summary(summary, i)
+                print("{0}.) Training MSE: {1}".format(i, MSE))
+
+
+            i0 = (i0 + batch_size) % data_array.shape[0]#Wrap index if past bounds
+            i1 = (i1 + batch_size) % data_array.shape[0]#Wrap index if past bounds
