@@ -27,13 +27,13 @@ def train_net(data_array, input_placeholder, output_placeholder, error_tensor, t
             in_arr = batch[:,:-1] #grab all but the last column
             out_arr = batch[:, -1] #grab last column
 
-            sess.run(train_tensor, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr}, options=run_options)
-            MSE = sess.run(error_tensor, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr}, options=run_options)
+            sess.run(train_tensor, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr})
+            MSE = sess.run(error_tensor, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr})
 
 
 
             if i % 50 == 0:
-                summary = sess.run(summaries, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr}, options=run_options)
+                summary = sess.run(summaries, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr})
                 train_writer.add_summary(summary, i)
                 print("{0}.) Training MSE: {1}".format(i, MSE))
 

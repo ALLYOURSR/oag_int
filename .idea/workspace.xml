@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b84fa725-83d5-487e-86c2-5bf4822375c6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/main_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_net/model_building.py" beforeDir="false" afterPath="$PROJECT_DIR$/neural_net/model_building.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neural_net/training.py" beforeDir="false" afterPath="$PROJECT_DIR$/neural_net/training.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/noisyfunction.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/noisyfunction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/plotting.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,8 +77,8 @@
       <file leaf-file-name="training.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neural_net/training.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+            <state relative-caret-position="595">
+              <caret line="35" column="112" selection-start-line="35" selection-start-column="112" selection-end-line="35" selection-end-column="112" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -593,8 +589,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/neural_net/training.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+        <state relative-caret-position="595">
+          <caret line="35" column="112" selection-start-line="35" selection-start-column="112" selection-end-line="35" selection-end-column="112" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
