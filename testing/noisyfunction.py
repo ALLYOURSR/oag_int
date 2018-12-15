@@ -2,9 +2,9 @@ import numpy as np
 
 def get_test_data():
     #Generate a noisy, multivariable dataset to ensure that the neural net is capable of learning
-    #function f = w *(ae^x+by^2+cz)
+    #function f = aw^4 + bx^3 + cy^2 + z
 
-    num_rows = 20000
+    num_rows = 50000
     a = 2
     b = .5
     c = 3
@@ -19,7 +19,8 @@ def get_test_data():
     for i in range(dom.shape[0]):
         w,x,y,z = dom[i,0], dom[i,1], dom[i,2], dom[i,3]
 
-        f[i] = w * (a * np.power(np.e, x) + b*np.power(y, 2) + c*z)
+        #f[i] = w * (a * np.power(np.e, x) + b*np.power(y, 2) + c*z)
+        f[i] = a * np.power(w, 4) + b * np.power(x,3) + c * np.power(y, 2) + z
         perturbed[i] = f[i] + np.random.normal(0, noise_magnitude)
 
 

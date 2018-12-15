@@ -14,6 +14,7 @@ run_params.write_to_file()#Save a record of the run for iteration later
 
 in_arr = get_test_data()
 
+
 if run_params.neural_net_type is NeuralNetTypes.Basic:
     input_placeholder, output_placeholder, error, train, summaries = build_net_basic(in_arr, run_params.num_neurons)
 elif run_params.neural_net_type is NeuralNetTypes.BatchNormalized:

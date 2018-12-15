@@ -8,14 +8,14 @@ def build_net_basic(data_array, num_neurons):
     #   the final column in data_array must be the values of the variable to predict, cum_365_prod for this exercise
 
     input_placeholder = tf.placeholder(dtype=tf.float32, shape=[None, data_array.shape[
-        1]])  # input shape is an arbitrary length vector to allow batch training
+        1]-1])  # input shape is an arbitrary length vector to allow batch training
     output_placeholder = tf.placeholder(dtype=tf.float32)
     tan_sig_layer = tf.contrib.layers.fully_connected(input_placeholder, num_neurons, activation_fn=tf.nn.sigmoid)
     lin_layer = tf.contrib.layers.fully_connected(tan_sig_layer, 1,
                                                   activation_fn=None)  # Specify None for linear activation
 
-    error = tf.sqrt(tf.reduce_mean(tf.square(tf.subtract(output_placeholder, lin_layer))))  # cost function, mse
-    train = tf.train.GradientDescentOptimizer(0.5).minimize(error)  # training step
+    error = tf.sqrt(tf.reduce_mean(tf.square((output_placeholder - lin_layer))))  # cost function, mse
+    train = tf.train.GradientDescentOptimizer(0.01).minimize(error)  # training step
 
     tf.summary.tensor_summary("Tan Sigmoid", tan_sig_layer)
     tf.summary.tensor_summary("Linear Layer", lin_layer)

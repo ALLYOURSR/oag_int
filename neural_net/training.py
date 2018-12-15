@@ -5,8 +5,8 @@ import numpy as np
 def get_batch(data_array, i0, i1):
     """Provides a quick and dirty wrapping functionality"""
     if i0 > i1:
-        a0 = data_array[i1:, :]
-        a1 = data_array[:i0, :]
+        a0 = data_array[i0:, :]
+        a1 = data_array[:i1, :]
         return np.concatenate([a0, a1], 0)
     else:
         return data_array[i0:i1, :]
@@ -27,13 +27,13 @@ def train_net(data_array, input_placeholder, output_placeholder, error_tensor, t
             in_arr = batch[:,:-1] #grab all but the last column
             out_arr = batch[:, -1] #grab last column
 
-            sess.run(train_tensor, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr})
-            MSE = sess.run(error_tensor, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr})
+            sess.run(train_tensor, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr}, options=run_options)
+            MSE = sess.run(error_tensor, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr}, options=run_options)
 
 
 
             if i % 50 == 0:
-                summary = sess.run(summaries, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr})
+                summary = sess.run(summaries, feed_dict={input_placeholder: in_arr, output_placeholder: out_arr}, options=run_options)
                 train_writer.add_summary(summary, i)
                 print("{0}.) Training MSE: {1}".format(i, MSE))
 
