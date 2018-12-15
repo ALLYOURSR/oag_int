@@ -9,7 +9,7 @@ def get_test_data():
     b = .5
     c = 3
 
-    noise_magnitude = 5 #RMSE error hovers around this value. Seems to be working, then?
+    noise_magnitude = 1 #RMSE error hovers around this value. Seems to be working, then?
 
     dom = np.random.rand(num_rows,4) #Initiate with random values for each variable
     f = np.zeros([num_rows,1])
@@ -21,9 +21,12 @@ def get_test_data():
 
         #f[i] = w * (a * np.power(np.e, x) + b*np.power(y, 2) + c*z)
         f[i] = a * np.power(w, 4) + b * np.power(x,3) + c * np.power(y, 2) + z
-        perturbed[i] = f[i] + np.random.normal(0, noise_magnitude)
 
 
-    out_arr = np.concatenate([dom, perturbed], 1)
+    perturbed = f + np.random.normal(0,noise_magnitude,f.shape)
 
-    return out_arr
+
+    noisy_arr = np.concatenate([dom, perturbed], 1)
+    clean_arr = np.concatenate([dom,f], 1)
+
+    return noisy_arr, clean_arr

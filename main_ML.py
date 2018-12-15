@@ -45,5 +45,5 @@ elif run_params.neural_net_type is NeuralNetTypes.BatchNormalized:
 else:
     raise NotImplementedError("Neural net type {0} not implemented!".format(run_params.neural_net_type))
 
-train_net(in_arr, input_placeholder, output_placeholder, error, train, summaries, run_params.batch_size, run_params.num_training_steps)
+#train_net(in_arr, input_placeholder, output_placeholder, error, train, summaries, run_params.batch_size, run_params.num_training_steps)
 

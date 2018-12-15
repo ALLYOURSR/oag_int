@@ -5,10 +5,10 @@ class RunParams:
     def __init__(self):
         self.num_neurons = 8
         self.batch_size=100
-        self.num_training_steps = 100000
+        self.num_training_steps = 1000
         self.neural_net_type = NeuralNetTypes.BatchNormalized
         self.train_rate = .001
-        self.log_period = 5 #Steps between logging
+        self.log_period = 59 #Steps between logging
 
         self.headers_to_evaluate = [#HeaderTypes.foot_per_stage,
                                     #HeaderTypes.fluid_barrels,
