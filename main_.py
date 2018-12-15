@@ -2,17 +2,17 @@ from config import *
 from objects import WellManager
 from parsing import parse_file
 from neural_net import train_net
-
+from visualization import plot_data
 
 #Instantiate config objects which specify how to parse data files
 global_config = GlobalConfig()
 completion_config = CompletionConfig(global_config.completion_filename)
 prod_by_operated_day_config = ProdByOperatedDayConfig(global_config.production_data_filename)
-well_index_config = WellIndexConfig(global_config.well_index_filename)
+#well_index_config = WellIndexConfig(global_config.well_index_filename)
 
 configs_to_parse = [completion_config,
                  prod_by_operated_day_config,
-                 well_index_config]
+                 ]
 
 #Instantiate WellManager which acts as a store for all well data
 well_manager = WellManager()
@@ -34,6 +34,7 @@ run_params.write_to_file()
 
 
 in_arr = well_manager.get_data_array(run_params.headers_to_evaluate)
+#plot_data(in_arr, run_params.headers_to_evaluate)
 
 train_net(in_arr, run_params.num_neurons, run_params.batch_size, run_params.num_training_steps)
 

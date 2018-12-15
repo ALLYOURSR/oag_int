@@ -30,6 +30,11 @@ class WellManager:
             self._well_data[api] = dict()
         self._well_data[api].update(header_to_data)
 
+    def _get_complete_wells(self, well_data, headers):
+        """Returns apis corresponding to wells with all headers complete
+        well_data is a dictionary of dictionaries indexed by api"""
+        apis = set()
+
     def get_data_array(self, headers_to_write, specified_apis=None):
         """creates numpy array with specified, ordered iterateable collection headers_to_write for tensorflow input
         if well_apis is not None, only the specified apis will be selected; else all wells are used
@@ -38,7 +43,7 @@ class WellManager:
         num_cols = len(headers_to_write)
         num_rows = len(specified_apis) if specified_apis is not None else len(self._well_data)
         out_arr = np.zeros([num_rows, num_cols])
-
+        num_skipped = 0
 
 
         if specified_apis is None:
@@ -46,11 +51,22 @@ class WellManager:
 
 
         row = 0
-        for w in self.specified_apis:
+        for w in specified_apis:
             column = 0
+            skip = False
             for h in headers_to_write:
-                out_arr[row, column] = self._well_data[w][h]
-                column += 1
-            row += 1
+                #Verify that the well has data from all the specified headers
+                if h not in self._well_data[w]:
+                    skip = True
+                    num_skipped += 1
+
+            if not skip:
+                for h in headers_to_write:
+                    out_arr[row, column] = self._well_data[w][h]
+                    column += 1
+                row += 1
+
+        #Truncate empty rows
+        out_arr = out_arr[:out_arr.shape[0]-num_skipped]
 
         return out_arr

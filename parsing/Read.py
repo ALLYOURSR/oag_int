@@ -56,6 +56,7 @@ def parse_file(config:BaseConfig, well_manager:WellManager, data_directory:str):
                 incomplete_well_apis.add(api)
                 skip = True
                 break
+
         if not skip:
             well_manager.insert_or_update_metadata(api, parsed_meta_vals)
             well_manager.insert_or_update_data(api, parsed_data_vals)

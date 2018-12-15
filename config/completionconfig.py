@@ -7,4 +7,10 @@ class CompletionConfig(BaseConfig):
         super().__init__(filename)
         self.metadata_headers = {HeaderTypes.api}
         self.data_headers = {HeaderTypes.fluid_barrels,
-                             HeaderTypes.foot_per_stage}
+                             HeaderTypes.stages,
+                             HeaderTypes.foot_per_stage,
+                             HeaderTypes.lateral_length,
+                             HeaderTypes.max_treat_pressure,
+                             HeaderTypes.proppant_pounds,
+                             HeaderTypes.proppant_pounds_per_foot,
+                             HeaderTypes.max_treat_pressure}
