@@ -9,7 +9,7 @@ def get_test_data():
     b = .5
     c = 3
 
-    noise_magnitude = .1
+    noise_magnitude = 5 #RMSE error hovers around this value. Seems to be working, then?
 
     dom = np.random.rand(num_rows,4) #Initiate with random values for each variable
     f = np.zeros([num_rows,1])
