@@ -1,2 +1,2 @@
-from .model_building import build_net_basic, build_net_bnorm
+from .model_building import NeuralNetFactory
 from .training import train_net

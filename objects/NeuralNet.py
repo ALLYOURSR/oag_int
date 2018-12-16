@@ -1,8 +1,6 @@
 import tensorflow as tf
 
 class NeuralNet:
-    #Careful, the current implementation does not allow for multiple neural nets. Not trivial to do so in tf, will convert
-    #as time permits
     def __init__(self, input_placeholder, output_placeholder, linear_output_layer, error_tensor, train_tensor, summaries, graph, scope):
         self.input_placeholder = input_placeholder
         self.output_placeholder = output_placeholder

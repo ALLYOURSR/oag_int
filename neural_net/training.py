@@ -1,6 +1,7 @@
 import tensorflow as tf
 import os
 import numpy as np
+from objects import ErrorTracker
 
 def get_batch(data_array, i0, i1):
     """Provides a quick and dirty wrapping functionality"""
@@ -11,11 +12,15 @@ def get_batch(data_array, i0, i1):
     else:
         return data_array[i0:i1, :]
 
+
+
 def train_net(data_array, neural_net, run_params):
     log_dir = '/tmp/oag_int/train/'
     os.system("rm {0} -r".format(log_dir))
     train_writer = tf.summary.FileWriter('/tmp/oag_int/train/',
                                          neural_net.session.graph)
+
+    error_tracker = ErrorTracker(200)
 
     i0 = 0
     i1 = run_params.batch_size
@@ -30,13 +35,13 @@ def train_net(data_array, neural_net, run_params):
 
         neural_net.session.run(neural_net.train_tensor, feed_dict={neural_net.input_placeholder: in_arr, neural_net.output_placeholder: out_arr})
         MSE = neural_net.session.run(neural_net.error_tensor, feed_dict={neural_net.input_placeholder: in_arr, neural_net.output_placeholder: out_arr})
-
+        error_tracker.add_error(MSE)
 
 
         if i % run_params.log_period == 0:
             summary = neural_net.session.run(neural_net.summaries, feed_dict={neural_net.input_placeholder: in_arr, neural_net.output_placeholder: out_arr})
             train_writer.add_summary(summary, i)
-            print("{0}.) Training MSE: {1}".format(i, MSE))
+            print("{0}. Training MSE: {1} -- Average MSE: {2}".format(i, MSE, error_tracker.get_current_average()))
 
 
         i0 = (i0 + run_params.batch_size) % data_array.shape[0]#Wrap index if past bounds

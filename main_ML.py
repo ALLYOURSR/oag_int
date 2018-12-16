@@ -4,7 +4,7 @@ from objects import WellManager
 from parsing import parse_file
 from neural_net import *
 from visualization import plot_data
-
+from neural_net import NeuralNetFactory
 
 #Instantiate config objects which specify how to parse data files
 global_config = GlobalConfig()
@@ -16,8 +16,9 @@ configs_to_parse = [completion_config,
                  prod_by_operated_day_config,
                  ]
 
-#Instantiate WellManager which acts as a store for all well data
-well_manager = WellManager()
+well_manager = WellManager()#Instantiate WellManager which acts as a store for all well data
+net_factory = NeuralNetFactory()
+
 
 #Keep track of incomplete wells to prune after parsing all files
 skipped_apis = set()
@@ -31,19 +32,15 @@ for s in skipped_apis:
 
 print("{0} skipped, {1} remaining, {2} parsed".format(len(skipped_apis), len(well_manager._well_metadata), len(skipped_apis) + len(well_manager._well_metadata)))
 
+
 run_params = RunParams()
 run_params.write_to_file()#Save a record of the run for iteration later
 
-
-in_arr = well_manager.get_data_array(run_params.headers_to_evaluate)
+data_arr = well_manager.get_data_array(run_params.headers_to_evaluate)
 #plot_data(in_arr, run_params.headers_to_evaluate)
 
-if run_params.neural_net_type is NeuralNetTypes.Basic:
-    input_placeholder, output_placeholder, error, train, summaries = build_net_basic(in_arr, run_params.num_neurons)
-elif run_params.neural_net_type is NeuralNetTypes.BatchNormalized:
-    input_placeholder, output_placeholder, error, train, summaries = build_net_bnorm(in_arr, run_params.num_neurons)
-else:
-    raise NotImplementedError("Neural net type {0} not implemented!".format(run_params.neural_net_type))
+neural_net = net_factory.build_net(run_params.neural_net_type, data_arr.shape[1]-1, run_params)
 
-#train_net(in_arr, input_placeholder, output_placeholder, error, train, summaries, run_params.batch_size, run_params.num_training_steps)
+train_net(data_arr, neural_net, run_params)
+
 
