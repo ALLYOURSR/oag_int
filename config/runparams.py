@@ -3,18 +3,20 @@ from .headertypes import HeaderTypes
 from .NeuralNetTypes import NeuralNetTypes
 
 class RunParams:
-    def __init__(self):
-        self.records_dir = "~/Projects/oag-int/run_records/"
-        self.data_dir = "~/Projects/oag-int/oag-tech-interview-data/"
-        self.run_name = "basic"
-        self.num_neurons_per_layer = 8
-        self.batch_size = 100
-        self.num_training_steps = 100000
-        self.neural_net_type = NeuralNetTypes.Basic
-        self.train_rate = .1
-        self.log_period = 50 #Steps between logging
+    def __init__(self, run_name, dict_params):
+        default_vals = {
+            'records_dir': "/home/x/Projects/oag_int/run_records/",
+            'data_dir': "/home/x/Projects/oag_int/oag-tech-interview-data/",
+            'run_name': run_name,
+            'num_neurons_per_layer': 8,
+            'batch_size': 200,
+            'num_training_steps': 1000000,
+            'neural_net_type': NeuralNetTypes.Basic,
+            'train_rate': .1,
+            'log_period': 100, #Steps between logging
 
-        self.headers_to_evaluate = [#HeaderTypes.foot_per_stage,
+            'headers_to_evaluate': [
+                                    #HeaderTypes.foot_per_stage,
                                     #HeaderTypes.fluid_barrels,
                                     HeaderTypes.lateral_length,
                                     HeaderTypes.max_treat_pressure,
@@ -26,11 +28,18 @@ class RunParams:
                                     # as the training algorithm uses the last column from WellManager.get_data_array
                                     # to calculate error!
                                     HeaderTypes.cum_365_prod
-                                    ]
+                                  ]
+        }
+        for i in default_vals.items():
+            setattr(self, i[0], default_vals.get(i[0], i[1]))
+
+        for i in dict_params.items():
+            if i[0] in default_vals:
+                setattr(self, i[0], dict_params.get(i[0], i[1]))
 
     def write_params_to_file(self):
         outstr = ""
-        #Quick and dirty logs
+        #Quick and dirty log
         for attr, value in self.__dict__.items():
             outstr += "{0}:{1}\n".format(attr, value)
 
@@ -38,7 +47,10 @@ class RunParams:
         f = open(join(self.records_dir, filename), "w")
         f.write(outstr)
 
-    def write_to_file(self):
-        """Writes the run parameters to a file so that runs can be reproduced and tweaked"""
-        # TODO
-        pass
+    #TODO: Move this to a more intuitive location
+    def write_results_to_file(self, mse):
+        outstr = str(mse)
+
+        filename = "{0}_results".format(self.run_name)
+        f = open(join(self.records_dir, filename), "w")
+        f.write(outstr)

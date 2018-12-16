@@ -1,0 +1,10 @@
+log_period:100
+records_dir:/home/x/Projects/oag_int/run_records/
+num_neurons_per_layer:8
+num_training_steps:1000000
+train_rate:0.1
+batch_size:200
+neural_net_type:NeuralNetTypes.Basic
+headers_to_evaluate:[<HeaderTypes.lateral_length: 'lateral_length'>, <HeaderTypes.max_treat_pressure: 'max_treat_press'>, <HeaderTypes.proppant_pounds: 'propp_lbs'>, <HeaderTypes.stages: 'stages'>, <HeaderTypes.cum_365_prod: 'cum_oil_365'>]
+run_name:basic
+data_dir:/home/x/Projects/oag_int/oag-tech-interview-data/
