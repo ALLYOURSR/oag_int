@@ -1,16 +1,16 @@
 from os.path import join
-from .headertypes import HeaderTypes
+from objects.headertypes import HeaderTypes
 from .NeuralNetTypes import NeuralNetTypes
 
 class RunParams:
-    def __init__(self, run_name, dict_params):
+    def __init__(self, run_name, dict_params=None):
         default_vals = {
             'records_dir': "/home/x/Projects/oag_int/run_records/",
             'data_dir': "/home/x/Projects/oag_int/oag-tech-interview-data/",
             'run_name': run_name,
             'num_neurons_per_layer': 8,
             'batch_size': 200,
-            'num_training_steps': 1000000,
+            'num_training_steps': None,#If None, terminates at positive training error slope (over large timestep window)
             'neural_net_type': NeuralNetTypes.Basic,
             'train_rate': .1,
             'log_period': 100, #Steps between logging
@@ -19,8 +19,8 @@ class RunParams:
                                     #HeaderTypes.foot_per_stage,
                                     #HeaderTypes.fluid_barrels,
                                     HeaderTypes.lateral_length,
-                                    HeaderTypes.max_treat_pressure,
-                                    HeaderTypes.proppant_pounds,
+                                    #HeaderTypes.max_treat_pressure,
+                                    #HeaderTypes.proppant_pounds,
                                     #HeaderTypes.proppant_pounds_per_foot,
                                     HeaderTypes.stages,
 
@@ -33,9 +33,10 @@ class RunParams:
         for i in default_vals.items():
             setattr(self, i[0], default_vals.get(i[0], i[1]))
 
-        for i in dict_params.items():
-            if i[0] in default_vals:
-                setattr(self, i[0], dict_params.get(i[0], i[1]))
+        if dict_params is not None:
+            for i in dict_params.items():
+                if i[0] in default_vals:
+                    setattr(self, i[0], dict_params.get(i[0], i[1]))
 
     def write_params_to_file(self):
         outstr = ""
@@ -49,7 +50,7 @@ class RunParams:
 
     #TODO: Move this to a more intuitive location
     def write_results_to_file(self, mse):
-        outstr = str(mse)
+        outstr = "Last average RMSE: {0}".format(mse)
 
         filename = "{0}_results".format(self.run_name)
         f = open(join(self.records_dir, filename), "w")

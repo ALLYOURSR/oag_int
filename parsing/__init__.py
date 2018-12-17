@@ -1,1 +1,1 @@
-from .Read import parse_file
+from .Read import parse_file, parse_time_series

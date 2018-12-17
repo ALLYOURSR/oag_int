@@ -2,20 +2,20 @@ from config import *
 from config import NeuralNetTypes
 from testing import *
 from neural_net import *
-from visualization import plot_data
 import numpy as np
+from neural_net import NeuralNetFactory
 
 #Instantiate config objects which specify how to parse data files
 global_config = GlobalConfig()
 
-run_params = RunParams()
-run_params.write_to_file()#Save a record of the run for iteration later
+run_params = RunParams("test")
 
+net_factory = NeuralNetFactory()
 
 noisy_arr, clean_arr = get_test_data()
 
-neural_net_basic = build_net_basic(noisy_arr.shape[1]-1, run_params)
-neural_net_bnorm = build_net_bnorm(noisy_arr.shape[1]-1, run_params)
+neural_net_basic = net_factory.build_net(NeuralNetTypes.Basic,noisy_arr.shape[1]-1, run_params)
+neural_net_bnorm = net_factory.build_net(NeuralNetTypes.BatchNormalized,noisy_arr.shape[1]-1, run_params)
 
 train_net(noisy_arr, neural_net_basic, run_params)
 train_net(noisy_arr, neural_net_bnorm, run_params)

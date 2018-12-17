@@ -35,10 +35,11 @@ print("{0} skipped, {1} remaining, {2} parsed".format(len(skipped_apis), len(wel
 
 
 
-all_runs = [RunParams("basic", {"neural_net_type":NeuralNetTypes.Basic}),
-            RunParams("batch_normalized", {"neural_net_type":NeuralNetTypes.BatchNormalized}),
-            RunParams("dual_layer_4", {"neural_net_type": NeuralNetTypes.Dual_Layer_Basic, "num_neurons_per_layer": 8}),
-            RunParams("dual_layer_8", {"neural_net_type": NeuralNetTypes.Dual_Layer_Basic, "num_neurons_per_layer": 4})]
+all_runs = [RunParams("single_", {"neural_net_type":NeuralNetTypes.Basic, "num_neurons_per_layer":2}),
+            RunParams("batch_normalized_", {"neural_net_type":NeuralNetTypes.BatchNormalized}),
+            RunParams("dual_layer_4_", {"neural_net_type": NeuralNetTypes.Dual_Layer_Basic, "num_neurons_per_layer": 8}),
+            RunParams("dual_layer_8_", {"neural_net_type": NeuralNetTypes.Dual_Layer_Basic, "num_neurons_per_layer": 4})
+           ]
 
 for r in all_runs:
     r.write_params_to_file()

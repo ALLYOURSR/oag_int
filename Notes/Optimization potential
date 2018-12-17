@@ -1,7 +1,0 @@
-WellManager.get_data_array has an ugly nested loop that could be optimized at the cost of readability and possibly some
-loss of generality.
-
-WellManager._well_data is stored as a dictionary of dictionaries, and the indices are enums, key value pairs of strings.
-I'm not sure if python is clever enough to avoid storing a copy of each string for each HeaderTypes key, but this could
-be a waste of memory for large datasets. An alternative would be a numpy array and a separate data structure to keep
-track of api->row for quick indexing.

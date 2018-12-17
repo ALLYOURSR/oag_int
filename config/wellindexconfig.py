@@ -1,4 +1,4 @@
-from .headertypes import HeaderTypes
+from objects.headertypes import HeaderTypes
 from .baseconfig import BaseConfig
 
 #Config file to keep track of which headers are relevant for each data file

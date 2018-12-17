@@ -52,7 +52,7 @@ def train_net(data_array, neural_net, run_params):
             slope = error_tracker_second_order.get_slope()
             print("{:8d}. Training MSE: {:8f} -- Average MSE: {:8f} -- 2nd order Error Slope: {:8f}".format(i, MSE, current_average, slope))
 
-            if slope > 0: #We're "regressing" on large epochs now
+            if run_params.num_training_steps is None and slope > 0: #We're "regressing" on large epochs now
                 break
             #I was hoping to use the slope as automatic break criteria, however it isn't trivial, because the slope is extremely noisy and requires minutes of running before showing a trend for some nets.
 
@@ -62,6 +62,8 @@ def train_net(data_array, neural_net, run_params):
         i1 = (i1 + run_params.batch_size) % data_array.shape[0]#Wrap index if past bounds
         i += 1
 
+        if run_params.num_training_steps is not None and i == run_params.num_training_steps:
+            break
 
 
     return error_tracker.get_current_average()

@@ -4,3 +4,4 @@ class GlobalConfig:
         self.production_data_filename = "prod-by-operated-day.csv"
         self.well_index_filename = "well-index.csv"
         self.completion_filename = "completion.csv"
+        self.monthly_production_filename = "monthly-production.csv"

@@ -1,39 +1,44 @@
 import numpy as np
 from enum import Enum
+from objects import Well
 
 class WellManager:
     def __init__(self):
-        self._well_metadata = dict()#key is int(api), value is an array
-        self._well_data = dict()#key is int(api), value is an array
-        #Note: I've separated metadata and numerical data so that I can use the optimized np.array for training
+        self._wells = dict()#Key is api, value is Well object
 
-    def get_data(self, api):
-        return self._well_data[api] or None
+    def get_well(self, api):
+        return self._wells[api] if api in self._wells else None
 
-    def get_metadata(self, api):
-        return self._well_metadata[api] or None
+    def get_or_create_well(self, api):
+        if api in self._wells:
+            w = self._wells[api]
+        else:
+            w = Well(api)
+            self._wells[api] = w
+
+        return w
+
+    def get_apis(self):
+        return self._wells.keys()
 
     def remove_well(self, api):
-        if api in self._well_metadata:
-            del self._well_metadata[api]
-        if api in self._well_data:
-            del self._well_data[api]
+        if api in self._wells:
+            del self._wells[api]
 
+    def add_or_append_series(self, api, header, dates, values):
+        if api not in self._wells:
+            self._wells[api] = Well(api)
+        self._wells[api].add_or_append_series(header, dates, values)
 
     def insert_or_update_metadata(self, api, header_to_data:dict):
-        if api not in self._well_metadata:
-            self._well_metadata[api] = dict()
-        self._well_metadata[api].update(header_to_data)
+        if api not in self._wells:
+            self._wells[api] = Well(api)
+        self._wells[api].add_or_update_metadata(header_to_data)
 
     def insert_or_update_data(self, api, header_to_data:dict):
-        if api not in self._well_data:
-            self._well_data[api] = dict()
-        self._well_data[api].update(header_to_data)
-
-    def _get_complete_wells(self, well_data, headers):
-        """Returns apis corresponding to wells with all headers complete
-        well_data is a dictionary of dictionaries indexed by api"""
-        apis = set()
+        if api not in self._wells:
+            self._wells[api] = Well(api)
+        self._wells[api].add_or_update_data(header_to_data)
 
     def get_data_array(self, headers_to_write, specified_apis=None):
         """creates numpy array with specified, ordered iterateable collection headers_to_write for tensorflow input
@@ -41,28 +46,29 @@ class WellManager:
         if include_api, first column in returned array corresponds to API
         """
         num_cols = len(headers_to_write)
-        num_rows = len(specified_apis) if specified_apis is not None else len(self._well_data)
+        num_rows = len(specified_apis) if specified_apis is not None else len(self._wells)
         out_arr = np.zeros([num_rows, num_cols])
         num_skipped = 0
 
 
         if specified_apis is None:
-            specified_apis=self._well_data.keys()
+            specified_apis=self._wells.keys()
 
 
         row = 0
-        for w in specified_apis:
+        for api in specified_apis:
+            w = self._wells[api]
             column = 0
             skip = False
             for h in headers_to_write:
                 #Verify that the well has data from all the specified headers
-                if h not in self._well_data[w]:
+                if h not in w._well_data:
                     skip = True
                     num_skipped += 1
 
             if not skip:
                 for h in headers_to_write:
-                    out_arr[row, column] = self._well_data[w][h]
+                    out_arr[row, column] = w._well_data[h]
                     column += 1
                 row += 1
 

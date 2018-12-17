@@ -14,3 +14,12 @@ class HeaderTypes(Enum):
     proppant_pounds_per_foot = "propp_lbs_per_ft"
     stages = "stages"
     top = "top"
+    spud_date = "spud_date"
+
+class TimeSeriesHeaderTypes(Enum):
+    #TimeSeries
+    api = "api"
+    oil_barrels = "bbls_oil_cond"
+    water_barrels = "bbls_wtr"
+    gas_mcf = "mcf_gas"
+    date = "rpt_date"

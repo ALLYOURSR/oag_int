@@ -3,7 +3,7 @@ from config import NeuralNetTypes
 from objects import WellManager
 from parsing import parse_file
 from neural_net import *
-from visualization import plot_data
+from utils import plot_data
 from neural_net import NeuralNetFactory
 
 #Instantiate config objects which specify how to parse data files
@@ -30,11 +30,11 @@ for c in configs_to_parse:
 for s in skipped_apis:
     well_manager.remove_well(s)
 
-print("{0} skipped, {1} remaining, {2} parsed".format(len(skipped_apis), len(well_manager._well_metadata), len(skipped_apis) + len(well_manager._well_metadata)))
+print("{0} skipped, {1} remaining, {2} parsed".format(len(skipped_apis), len(well_manager.get_apis()), len(skipped_apis) + len(well_manager.get_apis())))
 
 
-run_params = RunParams()
-run_params.write_to_file()#Save a record of the run for iteration later
+run_params = RunParams('default')
+run_params.write_params_to_file()#Save a record of the run for iteration later
 
 data_arr = well_manager.get_data_array(run_params.headers_to_evaluate)
 #plot_data(in_arr, run_params.headers_to_evaluate)
