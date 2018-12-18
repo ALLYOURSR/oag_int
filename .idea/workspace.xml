@@ -2,35 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b84fa725-83d5-487e-86c2-5bf4822375c6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/config/monthlyproductionconfig.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_data_engineering.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oag-tech-interview-data/prod-mock-data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objects/DataConverter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/progress_bar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/oag_int.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/oag_int.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notes/Key Evaluation Locations" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notes/Optimization potential" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/baseconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/baseconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/completionconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/completionconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/globalconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/globalconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/headertypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/objects/headertypes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/prodbyoperateddayconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/prodbyoperateddayconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/runparams.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/runparams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/wellindexconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/wellindexconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_ML.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_ML.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multinet_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/multinet_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_net/training.py" beforeDir="false" afterPath="$PROJECT_DIR$/neural_net/training.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multinet_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_ML.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/objects/ErrorTracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/objects/ErrorTracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objects/Well.py" beforeDir="false" afterPath="$PROJECT_DIR$/objects/Well.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objects/WellManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/objects/WellManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objects/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/objects/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsing/Read.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsing/Read.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsing/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsing/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/noisyfunction.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/noisyfunction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/plotting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/basic__params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/basic__results" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/basic_all_params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/basic_all_results" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/basic_params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/basic_results" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/batch_normalized__params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/batch_normalized__results" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/batch_normalized_all_params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/batch_normalized_all_results" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/batch_normalized_params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/batch_normalized_results" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/default_params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/dual_layer_4__params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/dual_layer_4__results" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/dual_layer_4_all_params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/dual_layer_4_all_results" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/dual_layer_4_params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/dual_layer_4_results" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/dual_layer_8__params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/dual_layer_8__results" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/dual_layer_8_all_params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/dual_layer_8_all_results" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/dual_layer_8_params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/dual_layer_8_results" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_records/single__params" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,11 +45,11 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file leaf-file-name="monthly-production.csv" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/oag-tech-interview-data/monthly-production.csv">
                 <provider selected="true" editor-type-id="LargeFileEditor">
-                  <state relative-caret-position="191">
+                  <state relative-caret-position="395">
                     <caret line="567" column="55" selection-start-line="567" selection-start-column="55" selection-end-line="567" selection-end-column="55" />
                   </state>
                 </provider>
@@ -57,7 +59,7 @@
               <entry file="file://$PROJECT_DIR$/objects/Well.py">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="935">
-                    <caret line="55" column="61" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="61" />
+                    <caret line="55" column="61" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="61" />
                     <folding>
                       <element signature="e#0#18#0" expanded="true" />
                     </folding>
@@ -88,8 +90,8 @@
             <file leaf-file-name="model_building.py" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/neural_net/model_building.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="238">
-                    <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+                  <state relative-caret-position="527">
+                    <caret line="31" column="74" lean-forward="true" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
                     <folding>
                       <element signature="e#0#23#0" expanded="true" />
                     </folding>
@@ -115,10 +117,10 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="prod-by-operated-day.csv" pinned="false" current-in-tab="false">
+            <file leaf-file-name="prod-by-operated-day.csv" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/oag-tech-interview-data/prod-by-operated-day.csv">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="2193">
+                  <state relative-caret-position="1273">
                     <caret line="129" selection-start-line="129" selection-end-line="129" />
                   </state>
                 </provider>
@@ -127,21 +129,20 @@
             <file leaf-file-name="Read.py" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/parsing/Read.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1146">
-                    <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+                  <state relative-caret-position="1207">
+                    <caret line="77" selection-start-line="77" selection-end-line="77" />
                     <folding>
                       <element signature="e#0#37#0" expanded="true" />
-                      <element signature="e#2793#4507#0" />
                     </folding>
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="main_test.py" pinned="false" current-in-tab="true">
+            <file leaf-file-name="main_test.py" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/main_test.py">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="272">
-                    <caret line="16" column="80" lean-forward="true" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
+                    <caret line="16" column="80" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
                     <folding>
                       <element signature="e#0#20#0" expanded="true" />
                     </folding>
@@ -156,22 +157,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main_ML.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_ML.py">
+      <file leaf-file-name="ErrorTracker.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objects/ErrorTracker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+            <state relative-caret-position="510">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErrorTracker.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/objects/ErrorTracker.py">
+      <file leaf-file-name="plotting.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/plotting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+            <state relative-caret-position="272">
+              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -195,11 +199,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="multinet_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/multinet_test.py">
+      <file leaf-file-name="main_ML.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_ML.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="527">
+              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -207,11 +211,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="completion.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/oag-tech-interview-data/completion.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file leaf-file-name="main_data_engineering.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_data_engineering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="34" column="56" lean-forward="true" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+            <state relative-caret-position="221">
+              <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -228,32 +242,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prod-mock-data.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oag-tech-interview-data/prod-mock-data.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="8881" column="84" selection-start-line="8881" selection-start-column="84" selection-end-line="8881" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="prodbyoperateddayconfig.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/prodbyoperateddayconfig.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WellManager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/objects/WellManager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+              <caret column="34" selection-start-column="34" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -312,13 +305,13 @@
         <option value="$PROJECT_DIR$/main_data_engineering.py" />
         <option value="$PROJECT_DIR$/parsing/Read.py" />
         <option value="$PROJECT_DIR$/objects/Well.py" />
-        <option value="$PROJECT_DIR$/multinet_test.py" />
         <option value="$PROJECT_DIR$/main_ML.py" />
         <option value="$PROJECT_DIR$/neural_net/training.py" />
         <option value="$PROJECT_DIR$/config/runparams.py" />
         <option value="$PROJECT_DIR$/main_test.py" />
         <option value="$PROJECT_DIR$/testing/noisyfunction.py" />
         <option value="$PROJECT_DIR$/objects/ErrorTracker.py" />
+        <option value="$PROJECT_DIR$/multinet_test.py" />
       </list>
     </option>
   </component>
@@ -333,6 +326,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,13 +337,32 @@
             <path>
               <item name="oag_int" type="b2602c69:ProjectViewProjectNode" />
               <item name="oag_int" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oag_int" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oag_int" type="462c0819:PsiDirectoryNode" />
               <item name="neural_net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oag_int" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oag_int" type="462c0819:PsiDirectoryNode" />
+              <item name="oag-tech-interview-data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oag_int" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oag_int" type="462c0819:PsiDirectoryNode" />
+              <item name="objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oag_int" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oag_int" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,7 +390,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main_data_engineering">
+  <component name="RunManager" selected="Python.multinet_test">
     <configuration name="main_" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="oag_int" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -444,7 +457,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multinet_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_ML.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -477,10 +490,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.multinet_test" />
         <item itemvalue="Python.main_data_engineering" />
         <item itemvalue="Python.main_test" />
         <item itemvalue="Python.main_" />
-        <item itemvalue="Python.multinet_test" />
         <item itemvalue="Python.noisyfunction" />
       </list>
     </recent_temporary>
@@ -499,19 +512,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="2560" height="1444" extended-state="6" />
+    <frame x="-1" y="-11" width="2562" height="1452" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.40793413" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.40793413" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -519,6 +531,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -554,6 +567,33 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/oag-tech-interview-data/prod-by-operated-day.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2193">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parsing/Read.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="80" lean-forward="true" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../env/microfossil/lib/python3.5/site-packages/matplotlib/artist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
@@ -593,13 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/plotting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -660,19 +693,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/objects/DataConverter.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oag-tech-interview-data/completion.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -680,9 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="34" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="6" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -690,9 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -702,15 +720,6 @@
           <caret column="47" selection-start-column="47" selection-end-column="47" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Notes/Key Evaluation Locations">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Notes/Optimization potential">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_records/basic__results">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/objects/headertypes.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -744,9 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="59" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -754,9 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -769,7 +772,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/objects/WellManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="357">
           <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -779,7 +782,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/oag-tech-interview-data/prod-mock-data.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="150977">
           <caret line="8881" column="84" selection-start-line="8881" selection-start-column="84" selection-end-line="8881" selection-end-column="84" />
         </state>
       </provider>
@@ -801,44 +804,16 @@
     <entry file="file://$PROJECT_DIR$/config/prodbyoperateddayconfig.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oag-tech-interview-data/monthly-production.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="191">
-          <caret line="567" column="55" selection-start-line="567" selection-start-column="55" selection-end-line="567" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objects/Well.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="61" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/multinet_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parsing/Read.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1146">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="1207">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#2793#4507#0" />
           </folding>
         </state>
       </provider>
@@ -847,33 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oag-tech-interview-data/prod-by-operated-day.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2193">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neural_net/model_building.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/runparams.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="121" selection-start-line="12" selection-start-column="121" selection-end-line="12" selection-end-column="121" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -894,7 +842,7 @@
     <entry file="file://$PROJECT_DIR$/main_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="80" lean-forward="true" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
+          <caret line="16" column="80" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
@@ -903,25 +851,95 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/objects/ErrorTracker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        <state relative-caret-position="510">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/plotting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main_ML.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        <state relative-caret-position="34">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/runparams.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="121" selection-start-line="12" selection-start-column="121" selection-end-line="12" selection-end-column="121" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neural_net/model_building.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="74" lean-forward="true" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oag-tech-interview-data/monthly-production.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="395">
+          <caret line="567" column="55" selection-start-line="567" selection-start-column="55" selection-end-line="567" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oag-tech-interview-data/prod-by-operated-day.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1273">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_ML.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oag-tech-interview-data/completion.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/Well.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" column="61" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_data_engineering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="56" lean-forward="true" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+        <state relative-caret-position="221">
+          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>

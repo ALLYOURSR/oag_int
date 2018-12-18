@@ -33,14 +33,25 @@ for s in skipped_apis:
 print("{0} skipped, {1} remaining, {2} parsed".format(len(skipped_apis), len(well_manager.get_apis()), len(skipped_apis) + len(well_manager.get_apis())))
 
 
-run_params = RunParams('default')
-run_params.write_params_to_file()#Save a record of the run for iteration later
 
-data_arr = well_manager.get_data_array(run_params.headers_to_evaluate)
-#plot_data(in_arr, run_params.headers_to_evaluate)
+#Train and test multiple nets
+all_runs = [RunParams("single", {"neural_net_type":NeuralNetTypes.Basic, "num_neurons_per_layer":2}),
+            RunParams("batch_normalized", {"neural_net_type":NeuralNetTypes.BatchNormalized}),
+            RunParams("dual_layer_4", {"neural_net_type": NeuralNetTypes.Dual_Layer_Basic, "num_neurons_per_layer": 8}),
+            RunParams("dual_layer_8", {"neural_net_type": NeuralNetTypes.Dual_Layer_Basic, "num_neurons_per_layer": 4})
+           ]
 
-neural_net = net_factory.build_net(run_params.neural_net_type, data_arr.shape[1]-1, run_params)
+for r in all_runs:
+    r.write_params_to_file()
+    data_arr = well_manager.get_data_array(r.headers_to_evaluate)
+    neural_net = net_factory.build_net(r.neural_net_type, data_arr.shape[1]-1, r)
+    last_mse = train_net(data_arr, neural_net, r)
+    r.write_results_to_file(last_mse)
 
-train_net(data_arr, neural_net, run_params)
+
+
+
+
+
 
 
