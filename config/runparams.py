@@ -1,6 +1,6 @@
 from os.path import join
-from objects.headertypes import HeaderTypes
-from .NeuralNetTypes import NeuralNetTypes
+from enums.headertypes import HeaderTypes
+from enums.NeuralNetTypes import NeuralNetTypes
 
 class RunParams:
     def __init__(self, run_name, dict_params=None):

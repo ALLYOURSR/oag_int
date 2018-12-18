@@ -1,6 +1,6 @@
 import numpy as np
-from .headertypes import TimeSeriesHeaderTypes, HeaderTypes
-from datetime import datetime, timedelta
+from enums.headertypes import TimeSeriesHeaderTypes
+from datetime import timedelta
 
 class Well:
     def __init__(self, api):

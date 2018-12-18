@@ -1,4 +1,4 @@
-from objects.headertypes import HeaderTypes
+from enums.headertypes import HeaderTypes
 
 #TODO: probably remove this
 class BaseConfig:

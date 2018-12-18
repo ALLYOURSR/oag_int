@@ -1,6 +1,6 @@
 import tensorflow as tf
 from objects import NeuralNet
-from config import NeuralNetTypes
+from enums import NeuralNetTypes
 
 class NeuralNetFactory:
     def __init__(self):

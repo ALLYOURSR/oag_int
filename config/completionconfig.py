@@ -1,5 +1,5 @@
 from .baseconfig import BaseConfig
-from objects.headertypes import HeaderTypes
+from enums.headertypes import HeaderTypes
 
 #Config file to keep track of which headers are relevant for each data file
 class CompletionConfig(BaseConfig):

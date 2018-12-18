@@ -1,5 +1,5 @@
 from config import *
-from config import NeuralNetTypes
+from enums import NeuralNetTypes
 from testing import *
 from neural_net import *
 import numpy as np

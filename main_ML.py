@@ -1,9 +1,8 @@
 from config import *
-from config import NeuralNetTypes
+from enums import NeuralNetTypes
 from objects import WellManager
 from parsing import parse_file
 from neural_net import *
-from utils import plot_data
 from neural_net import NeuralNetFactory
 
 #Instantiate config objects which specify how to parse data files
@@ -35,8 +34,8 @@ print("{0} skipped, {1} remaining, {2} parsed".format(len(skipped_apis), len(wel
 
 
 #Train and test multiple nets
-all_runs = [RunParams("single", {"neural_net_type":NeuralNetTypes.Basic, "num_neurons_per_layer":2}),
-            RunParams("batch_normalized", {"neural_net_type":NeuralNetTypes.BatchNormalized}),
+all_runs = [RunParams("single", {"neural_net_type": NeuralNetTypes.Basic, "num_neurons_per_layer":2}),
+            RunParams("batch_normalized", {"neural_net_type": NeuralNetTypes.BatchNormalized}),
             RunParams("dual_layer_4", {"neural_net_type": NeuralNetTypes.Dual_Layer_Basic, "num_neurons_per_layer": 8}),
             RunParams("dual_layer_8", {"neural_net_type": NeuralNetTypes.Dual_Layer_Basic, "num_neurons_per_layer": 4})
            ]

@@ -1,4 +1,4 @@
-from objects import TimeSeriesHeaderTypes
+from enums import TimeSeriesHeaderTypes
 from .baseconfig import BaseConfig
 
 class MonthlyProductionConfig(BaseConfig):
