@@ -11,9 +11,9 @@ def get_test_data():
 
     noise_magnitude = 5 #RMSE error hovers around this value. Seems to be working, then?
 
-    dom = np.random.rand(num_rows,4) #Initiate with random values for each variable
-    f = np.zeros([num_rows,1])
-    perturbed = np.zeros([num_rows,1])
+    dom = np.random.rand(num_rows, 4) #Initiate with random values for each variable
+    f = np.zeros([num_rows, 1])
+    perturbed = np.zeros([num_rows, 1])
 
 
     for i in range(dom.shape[0]):

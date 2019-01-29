@@ -76,7 +76,6 @@ def parse_time_series(config:BaseConfig, well_manager:WellManager, data_director
 
     _write_to_well(well_manager, api, temp_lists)
 
-
 def parse_file(config:BaseConfig, well_manager:WellManager, data_directory:str):
     """Parses the given file, filling well_manager with well data
     Does not write data if any data or metadata columns are null
