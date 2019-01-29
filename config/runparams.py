@@ -1,12 +1,13 @@
 from os.path import join
 from enums.headertypes import HeaderTypes
 from enums.NeuralNetTypes import NeuralNetTypes
+import os
 
 class RunParams:
     def __init__(self, run_name, dict_params=None):
         default_vals = {
-            'records_dir': "/home/x/Projects/oag_int/run_records/",
-            'data_dir': "/home/x/Projects/oag_int/oag-tech-interview-data/",
+            'records_dir': join(os.path.dirname(__file__), '..', "run_records"),
+            'data_dir': join(os.path.dirname(__file__), '..', "data"),
             'run_name': run_name,
             'num_neurons_per_layer': 8,
             'batch_size': 200,

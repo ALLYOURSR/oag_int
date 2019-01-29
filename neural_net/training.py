@@ -12,8 +12,6 @@ def get_batch(data_array, i0, i1):
     else:
         return data_array[i0:i1, :]
 
-
-
 def train_net(data_array, neural_net, run_params):
     """Trains a net according to the specified run_params on the given data_array, an [n,d+1] array where d is the number of data variables. Last column must be variable to predict"""
     log_dir = '/tmp/oag_int/train/'
@@ -54,7 +52,7 @@ def train_net(data_array, neural_net, run_params):
 
             if run_params.num_training_steps is None and slope > 0: #We're "regressing" on large epochs now
                 break
-            #I was hoping to use the slope as automatic break criteria, however it isn't trivial, because the slope is extremely noisy and requires minutes of running before showing a trend for some nets.
+
 
 
 
