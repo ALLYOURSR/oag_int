@@ -14,7 +14,7 @@ class ErrorTracker:
         self.last_index = self.last_index % self.array_length
 
     def get_current_average(self):
-        return np.mean(self.errors)
+        return np.mean(self.errors[:self.last_index])
 
     def get_slope(self):
         # Calculates a linear regression of the current errors to see if the net is still learning. Use as quit condition
