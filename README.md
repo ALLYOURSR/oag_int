@@ -41,7 +41,7 @@ class RunParams:
                                     HeaderTypes.stages,									
 									
                                     HeaderTypes.cum_365_prod #Last header in this list is the value to predict
-					]
+				]
 			
        ...
 			}
