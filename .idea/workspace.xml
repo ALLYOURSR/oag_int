@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b84fa725-83d5-487e-86c2-5bf4822375c6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_net/training.py" beforeDir="false" afterPath="$PROJECT_DIR$/neural_net/training.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objects/ErrorTracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/objects/ErrorTracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_records/single_params" beforeDir="false" afterPath="$PROJECT_DIR$/run_records/single_params" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oag-tech-interview-data/completion.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oag-tech-interview-data/monthly-production.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oag-tech-interview-data/prod-by-operated-day.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oag-tech-interview-data/well-index.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -237,11 +236,6 @@
             <path>
               <item name="oag_int" type="b2602c69:ProjectViewProjectNode" />
               <item name="oag_int" type="462c0819:PsiDirectoryNode" />
-              <item name="oag-tech-interview-data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oag_int" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oag_int" type="462c0819:PsiDirectoryNode" />
               <item name="objects" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -380,7 +374,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="28" width="2576" height="1456" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11210938" />
       <window_info anchor="bottom" id="TODO" order="6" />
