@@ -41,10 +41,10 @@ class RunParams:
                                     HeaderTypes.stages,									
 									
                                     HeaderTypes.cum_365_prod #Last header in this list is the value to predict
-									]
+					]
 			
        ...
-						}
+			}
 ```
 
 Inspired by academic best practices, these parameters are written to disk prior to any training run, alongside training run results. In this manner, three goals are accomplished:
